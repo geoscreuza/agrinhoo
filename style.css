@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap')
+
+*,
+*::before,
+*::after
+  // position
+  margin: 0
+
+  // size
+  padding: 0
+
+  box:
+    sizing: border-box
+
+button
+  // typography
+  font: inherit
+  
+:root
+  // colors
+  --cr-white: 0, 0%, 100%
+  --cr-river-bed: 201, 19%, 31%
+  --cr-limed-spruce: 202, 20%, 26%
+  --cr-outer-space: 202, 20%, 23%
+  --cr-danube: 207, 90%, 61%
+
+// breakpoints
+$break-md: 768px
+
+// fonts
+$font-primary: 'Poppins', sans-serif
+$font-wt-600: 600
+
+// components
+$page_cr: hsl(var(--cr-white))
+$page_bd: hsl(var(--cr-limed-spruce))
+$page_font: $font-primary
+
+$nav_bd: hsl(var(--cr-danube))
+$nav__item_bd: hsl(var(--cr-river-bed))
+$nav__item_bd_hov: $nav_bd
+
+$nav__dropdown-list-1_bd: hsl(var(--cr-outer-space))
+$nav__dropdown-list-2_bd: hsl(202, 20%, 20%)
+$nav__dropdown-item_bd: hsl(var(--cr-outer-space))
+$nav__dropdown-item_bd_hov: $page_bd
+
+$logo_cr: $page_cr
+
+.page
+  // color
+  color: $page_cr
+  background: $page_bd
+  
+  // grid
+  display: grid
+  
+  grid:
+    template:
+      rows: auto
+      areas: "nav"
+  
+  // typography
+  font:
+    family: $page_font
+    
+  &__nav
+    // grid
+    grid:
+      area: nav
+    
+.nav
+  // color
+  background: $nav_bd
+  
+  // position
+  position: relative
+  
+  // visual
+  box:
+    shadow: 0 0.3em 0.3em hsla(0, 0%, 0%, 0.1)
+  
+  @media screen and (min-width: $break-md)
+    // flex
+    display: flex
+    
+    justify:
+      content: space-between
+      
+    align:
+      items: center
+    
+    .menu-btn
+      // display
+      display: none
+    
+  &__top-bar
+    // flex
+    display: flex
+    
+    justify:
+      content: space-between
+      
+    align:
+      items: center
+      
+    // size
+    height: 3.5rem
+    
+  &__logo
+    // position
+    margin:
+      left: 0.5em
+  
+  &__list
+    // display
+    display: none
+    
+    // visual
+    list:
+      style: none
+    
+    @media screen and (min-width: $break-md)
+      // display
+      display: flex
+      height: 100%
+      
+    &.active
+      // display
+      display: block
+      
+  &__item
+    // color
+    background: $nav__item_bd
+    
+    @media screen and (min-width: $break-md)
+      // color
+      background: transparent
+      
+      // flex
+      display: flex
+    
+    &:hover
+      // color
+      background: $nav__item_bd_hov
+    
+      @media screen and (min-width: $break-md)
+        // color
+        background: $nav__item_bd
+      
+        .nav__dropdown-list-1
+          // visual
+          display: block
+      
+  &__link
+    // color
+    color: inherit
+    background: inherit
+    
+    // display
+    display: block
+    
+    // size
+    width: 100%
+    border: 0
+    padding: 0.8em var(--nav__link_pg, 1em)
+    
+    // typography
+    text:
+      align: left
+      decoration: 0
+      
+    // visual
+    cursor: pointer
+    
+    user:
+      select: none
+      
+    @media screen and (min-width: $break-md)
+      // flex
+      display: flex
+      
+      align:
+        items: center
+      
+    &_toggler
+      // flex
+      display: flex
+      gap: 0.5em
+      
+      align:
+        items: center
+    
+  &__dropdown-list
+    // visual
+    list:
+      style: none
+      
+    @media screen and (min-width: $break-md)
+      // visual
+      box:
+        shadow: 0 0.5em 0.5em hsla(0, 0%, 0%, 0.2)
+      
+    &.active
+      // display
+      display: block
+      
+  &__dropdown-list-1
+    --nav__link_pg: 2em
+    
+    // color
+    background: $nav__dropdown-list-1_bd
+    
+    // display
+    display: none
+    
+    @media screen and (min-width: $break-md)
+      position: absolute
+      top: 100%
+    
+  &__dropdown-list-2
+    --nav__link_pg: 3em
+  
+    // color
+    background: $nav__dropdown-list-2_bd
+    
+    // display
+    display: none
+    
+    @media screen and (min-width: $break-md)
+      // position
+      position: absolute
+      
+      // size
+      width: 100%
+      
+      // typography
+      font:
+        size: 0.9rem
+    
+  &__dropdown-item
+    &:hover
+      // color
+      background: $nav__dropdown-item_bd_hov
+    
+      @media screen and (min-width: $break-md)
+        // color
+        background: $nav_bd
+    
+  &__dropdown-link
+    @extend .nav__link
+    
+.logo
+  // color
+  color: $logo_cr
+  
+  // typography
+  font:
+    size: 1.8rem
+    weight: $font-wt-600
+    
+  text:
+    decoration: 0
+    
+.menu-btn
+  // color
+  background: transparent
+  color: inherit
+  
+  // size
+  height: 100%
+  border: 0
+  
+  aspect:
+    ratio: 1
+    
+  // visual
+  cursor: pointer
+    
+  > i
+    // typography
+    font:
+      size: 2rem
