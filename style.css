@@ -67,10 +67,8 @@ h1 {
 .sidenav ul li a {
   display: block;
   text-decoration: none;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: .9em;
-  font-weight: 100;
-  font-style: normal;
   padding: 10px 20px;
   height: 20px;
   width: 100%;
