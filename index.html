@@ -7,151 +7,21 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    - 
-    const logo = {
-      title: "MyLogo",
-      href: "#",
-    };
+    <label for="x" class="hamburger-menu">
+      <input id="x" type="checkbox">
+    </label>
     
-  - const logoTitle = "MyLogo";
-  
-  -
-    const navItems = [
     
-      {
-        title: "Home",
-        href: "#",
-      },
-      
-      {
-        title: "About",
-        href: "#",
-      },
-      
-      {
-        title: "Dropdown",
-        
-        dropdownItems: [
-        
-          {
-            title: "Category 01",
-            href: "#",
-          },
-          
-          {
-            title: "Category 02",
-            href: "#",
-          },
-          
-          {
-            title: "Category 03",
-            
-            dropdownItems: [
-            
-              {
-               title: "Product 01",
-               href: "#",
-              },
-              
-              {
-               title: "Product 02",
-               href: "#",
-              },
-              
-              {
-               title: "Product 03",
-               href: "#",
-              },
-              
-            ],
-            
-          },
-          
-        ],
-        
-      },
-      
-      {
-        title: "Portfolio",
-        href: "#",
-      },
-      
-      {
-        title: "Blog",
-        
-        dropdownItems: [
-        
-          {
-            title: "Article 01",
-            href: "#",
-          },
-          
-          {
-            title: "Article 02",
-            href: "#",
-          },
-          
-          {
-            title: "Article 03",
-            href: "#",
-          },
-          
-        ],
-        
-      },
-      
-      {
-        title: "Contact",
-        href: "#",
-      },
+    <aside class="sidebar">
+      <nav>
+        <div>This</div>
+        <div>Is</div>
+        <div>The</div>
+        <div>Sidebar</div>
+      </nav>
+    </aside>
     
-    ];
-  
-  body.page
-    nav#nav.nav.page__nav
-      .nav__top-bar
-        a.logo.nav__logo(
-          href=logo.href
-        )= logo.title
-  
-        button.menu-btn(
-          aria-label="Open navigation."
-        )
-          i.fa-solid.fa-bars
-      
-      if navItems.length > 0
-        ul.nav__list
-          each navItem in navItems
-            li.nav__item
-              if navItem.href
-                a.nav__link(
-                  href=navItem.href
-                )= navItem.title
-                
-              else
-                if navItem.dropdownItems.length > 0
-                  button.nav__link.nav__link_toggler= navItem.title
-                    i.fa-solid.fa-caret-down
-                  
-                  ul.nav__dropdown-list.nav__dropdown-list-1
-                    each dropItem in navItem.dropdownItems
-                      li.nav__dropdown-item
-                        if dropItem.href
-                          a.nav__dropdown-link(
-                            href=dropItem.href
-                          )= dropItem.title
-                          
-                        else
-                          if navItem.dropdownItems.length > 0
-                            button.nav__link.nav__link_toggler= dropItem.title
-                              i.fa-solid.fa-caret-down
-                            
-                            ul.nav__dropdown-list.nav__dropdown-list-2
-                              each dropDropItem in dropItem.dropdownItems
-                                li.nav__dropdown-item
-                                  if dropDropItem.href
-                                    a.nav__dropdown-link(
-                                      href=dropDropItem.href
-                                    )= dropDropItem.title
+    
+    
   </body>
 </html>
