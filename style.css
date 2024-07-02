@@ -144,6 +144,16 @@ section {
   }
 }
 
+
+.title {
+  font-family: 'Pacifico';
+  font-weight: norma;
+  font-size: 40px;
+  text-align: center;
+  line-height: 1.4;
+  color: $orange;
+}
+
 .dropdown {
   position: relative;
   
