@@ -30,12 +30,11 @@ p {
 h3 {
   display: block;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.17em;
+  font-size: 1.10em;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold;
   unicode-bidi: isolate;
 }
 
