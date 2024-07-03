@@ -172,8 +172,8 @@ footer {
   background-color: #3d6e47;
   color: black;
   font-family: 'Kanit', sans-serif;
+}
 
-  <style>
     body {
       display: flex;
     }
@@ -188,5 +188,3 @@ footer {
     .content {
       margin-left: 20px;
     }
-  </style>
-</head>
