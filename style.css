@@ -172,3 +172,21 @@ footer {
   background-color: #3d6e47;
   color: black;
   font-family: 'Kanit', sans-serif;
+
+  <style>
+    body {
+      display: flex;
+    }
+    .menu {
+      position: -webkit-sticky; /* Support for Safari */
+      position: sticky;
+      top: 0;
+      padding: 10px;
+      background-color: lightgreen;
+      border: 1px solid #ccc;
+    }
+    .content {
+      margin-left: 20px;
+    }
+  </style>
+</head>
