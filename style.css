@@ -169,11 +169,11 @@ section {
 footer {
   padding: 1% 5%;
   text-align:center;
-  background-color: #373B44;
-  color: white;
+  background-color: #3d6e47;
+  color: black;
   
   a {
-    color: #FE4B74;
+    color: #ffffff;
     font-weight: 500;
     text-decoration: none;
   }
